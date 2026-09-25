@@ -20,9 +20,9 @@ cross-validation, we find that (i) an in-context tabular learner outperforms gra
 boosting by 0.039 relative-absolute-error units, reproduced on two disjoint feature
 families; (ii) a shared-trunk multitask network exploits a 33 %-filled label matrix
 for a further 0.016, and auxiliary supervision from a dense single-concentration
-screen adds 0.015 more; and (iii) blending two model families yields 0.031 — larger
-than any single-model change and beating both parents on every isoform despite error
-correlations of 0.89–0.94.
+screen adds 0.015 more; and (iii) blending two model families yields 0.031 relative to
+the better parent — larger than any single-model change, and beating both parents on
+every isoform despite error correlations of 0.89–0.94.
 
 Three negative results carry more transferable content than the positive ones. A
 dense auxiliary assay measured on the *same* compounds as the target degrades
@@ -173,9 +173,11 @@ parents on *every* isoform:
 | CYP2D6 | 0.9232 | 0.9427 | **0.9012** | −0.022 |
 | CYP3A4 | 0.5023 | 0.4914 | **0.4617** | −0.030 |
 
-Error correlations between the two families are **0.888–0.938** — high. The gain is
-therefore not decorrelation but variance reduction from averaging two function classes
-with a tuned weight; beating both parents everywhere is the signature of the latter.
+That is 0.031 below the better parent and 0.036 below the single-task in-context
+baseline. Error correlations between the two families are **0.888–0.938** — high. The
+gain is therefore not decorrelation but variance reduction from averaging two function
+classes with a tuned weight; beating both parents everywhere is the signature of the
+latter.
 
 **Figure 2** (`../06_figures/multitask_and_blend.png`) — multitask ablation ladder,
 per-isoform blend comparison, and the four-submission trajectory against the frontier.

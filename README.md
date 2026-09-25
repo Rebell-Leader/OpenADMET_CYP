@@ -27,21 +27,25 @@ before comparing to a board score.
 
 ## What actually moved the needle
 
-Eight approaches were benchmarked under identical scaffold-grouped folds. Ranked by
-effect on MA-ST-RAE:
+Ten approaches were benchmarked under identical scaffold-grouped folds. Each Δ below
+is against an explicitly named comparator — they are *not* all against one baseline,
+and they do not sum:
 
-| change | Δ MA-ST-RAE | note |
-|---|---|---|
-| Blending two model families (TabICL × multitask) | **−0.031** | beats *both* parents on *every* isoform |
-| In-context tabular model instead of gradient boosting | −0.039 | reproduced on two disjoint feature sets |
-| Multitask shared trunk vs. four independent fits | −0.016 | same architecture, same folds |
-| Auxiliary supervision from the single-concentration screen | −0.015 | as a *task*, not a feature |
-| Cross-isoform stacking | −0.008 | leak-free estimate |
-| Screen pseudo-labels (floor-clipped, 2 of 4 isoforms) | −0.008 | a-priori selection rule |
-| Ensembling beyond 8 estimators | −0.001 | saturated |
-| Public ChEMBL/PubChem augmentation | **+0.057** | hurts 3 of 4 isoforms |
-| Frozen CheMeleon embeddings | **+0.010** | worse than ECFP4 + descriptors |
-| Screen distillation (predicted log2fc as a feature) | **+0.036** | see the leak warning below |
+| change | Δ MA-ST-RAE | vs. what | note |
+|---|---|---|---|
+| Blending two model families (TabICL × multitask) | **−0.031** | best single parent (multitask, 0.7175) | beats *both* parents on *every* isoform |
+| In-context tabular model instead of gradient boosting | −0.039 | LightGBM, same features | reproduced on two disjoint feature sets |
+| Multitask shared trunk vs. four independent fits | −0.016 | single-task MLP, same width | isolates sharing, not "a net helped" |
+| Auxiliary supervision from the single-concentration screen | −0.015 | same trunk without aux heads | as a *task*, not a feature |
+| Cross-isoform stacking | −0.008 | TabICL n=32 (0.7226) | leak-free nested estimate |
+| Screen pseudo-labels (floor-clipped, 2 of 4 isoforms) | −0.008 | TabICL n=32 | a-priori selection rule |
+| Ensembling 8 → 32 estimators | −0.001 | TabICL n=8 | saturated |
+| Frozen CheMeleon embeddings | **+0.010** | ECFP4 + descriptors, same heads | representation axis exhausted |
+| Screen distillation (predicted log2fc as a feature) | **+0.036** | TabICL n=32 | see the leak warning below |
+| Public ChEMBL/PubChem augmentation | **+0.057** | challenge data only | hurts 3 of 4 isoforms |
+
+For reference, the full local progression across our four submissions was
+0.7632 → 0.7150 → 0.7111 → **0.6868**.
 
 ## Three findings worth reusing elsewhere
 
