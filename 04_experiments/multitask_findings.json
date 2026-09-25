@@ -1,0 +1,61 @@
+{
+  "date": "2026-08-22",
+  "experiment": "multitask network (Memo 3 \u00a73.3) + blend",
+  "label_matrix": {
+    "compounds": 4905,
+    "filled_pct": 33.3,
+    "with_1_label": 3596,
+    "with_all_4": 41,
+    "aux_log2fc_filled_pct": 89.2
+  },
+  "variants_MA_ST_RAE": {
+    "st_mlp": 0.7422,
+    "mt_3": 0.7266,
+    "mt_all4": 0.7322,
+    "mt_3_aux": 0.7199,
+    "mt_all4_aux": 0.7175
+  },
+  "ablation_multitask_vs_singletask": -0.0156,
+  "ablation_cyp2d6_exclusion": {
+    "without_aux": "+0.0056 (exclusion helps, as Memo 2 predicted)",
+    "with_aux": "-0.0023 (REVERSES: sharing all four is better once the auxiliary task is present)"
+  },
+  "ablation_auxiliary_task": {
+    "on_mt_3": -0.0068,
+    "on_mt_all4": -0.0147
+  },
+  "best_multitask_alone": 0.7175,
+  "blend": {
+    "components": "mt_all4_aux (seed-averaged x3) + TabICL n=32 with floor-clipped pseudo-labels on CYP2C9/CYP3A4",
+    "weight_selection": "nested inner-CV per isoform, grid 0..1 step 0.05",
+    "weights_multitask_share": {
+      "CYP1A2": 0.39,
+      "CYP2C9": 0.62,
+      "CYP2D6": 0.41,
+      "CYP3A4": 0.47
+    },
+    "MA_ST_RAE": 0.6867914870537432,
+    "per_isoform": {
+      "CYP1A2": 0.7939,
+      "CYP2C9": 0.5904,
+      "CYP2D6": 0.9012,
+      "CYP3A4": 0.4617
+    },
+    "beats_both_parents_on_every_isoform": true,
+    "error_correlation_between_families": {
+      "CYP1A2": 0.925,
+      "CYP2C9": 0.904,
+      "CYP2D6": 0.938,
+      "CYP3A4": 0.888
+    },
+    "mechanism": "NOT error decorrelation -- the error correlations are HIGH (0.89-0.94). The gain is variance reduction from blending two different function classes fit to the same data, with the weight tuned per isoform. Distinct from the earlier 'gains compete' finding, which concerned two ways of injecting the SAME information."
+  },
+  "progression_local": {
+    "v1": 0.7632,
+    "v2": 0.715,
+    "v3": 0.7111,
+    "v4": 0.6867914870537432
+  },
+  "projected_board_v4": 0.807,
+  "caveat": "Blend weights are selected by nested inner CV so the 0.6868 is not fold-peeked, but the CHOICE to blend these two specific families was informed by seeing both benchmarks. Treat the projected board figure as an estimate carrying the same +0.113/+0.127 calibration uncertainty."
+}

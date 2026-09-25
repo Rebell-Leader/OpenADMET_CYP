@@ -1,0 +1,43 @@
+{
+  "chemeleon_experiment": {
+    "encoder": "chemeleon_mp.pt from Zenodo record 15460715, md5 6a80b54fdb7de37ef0374d302f01e8ce (verified), 34,859,448 B",
+    "architecture": "chemprop BondMessagePassing, d_h=2048, depth=6, d_v=72, d_e=14, no bias",
+    "usage": "FROZEN featurizer with MeanAggregation; NOT fine-tuned",
+    "embedding_dims": 2048,
+    "svd256_explained_var": 0.771,
+    "results_MA_ST_RAE": {
+      "ecfp4_desc_lgbm": 0.7632,
+      "chemeleon_lgbm_full2048": 0.7956,
+      "ecfp4_desc_tabicl_svd256": 0.7243,
+      "chemeleon_tabicl_svd256": 0.7617,
+      "chemeleon_plus_ecfp4_tabicl": 0.7324
+    },
+    "verdict": "NEGATIVE. Frozen CheMeleon embeddings lose to ECFP4+RDKit-2D under both heads (+0.032 LGBM, +0.037 TabICL). Concatenating both also loses (0.7324 vs 0.7243).",
+    "one_exception": "CYP2D6 under LightGBM improves 0.9796 -> 0.9472 (-0.032), the only winning cell",
+    "architecture_effect_reproduces": "CheMeleon features: LGBM 0.7956 -> TabICL 0.7617 (-0.034), same direction as on ECFP4",
+    "limitation": "rules out FROZEN embeddings as drop-in features, NOT fine-tuned CheMeleon. The organizers' own fine-tuned CheMeleon baseline scored 0.8335 on the leaderboard vs their TabICL 0.6755, which is stronger evidence that architecture beats representation here."
+  },
+  "cyp2d6_investigation": {
+    "hypothesis_1_assay_noise": "REFUTED. CYP2D6 has the NARROWEST credible intervals of all four isoforms (median 0.272 overall, 0.261 above the floor) vs CYP2C9 0.526/0.432. Its noise-to-signal ratio (0.414) is mid-pack, better than CYP2C9 (0.729). It is not being scored against assay noise.",
+    "hypothesis_2_orthogonal_sar": "SUPPORTED, strongly. Mean off-diagonal Spearman with the other three isoforms is -0.002 for CYP2D6, vs +0.288 (CYP1A2), +0.330 (CYP2C9), +0.375 (CYP3A4). CYP2D6 potency is essentially uncorrelated with the rest.",
+    "pharmacophore_evidence": {
+      "basic_nitrogen_is_the_only_positive_simple_feature": "rho +0.302 for CYP2D6; NEGATIVE for all three others (-0.098, -0.190, -0.119)",
+      "lipophilicity_inert": "logP rho +0.034 for CYP2D6 vs +0.602 for CYP3A4, +0.485 CYP2C9",
+      "aromatic_count_inert": "n_arom rho -0.001 for CYP2D6 vs +0.393 for CYP2C9 and CYP3A4",
+      "dose_response": "fraction potent (pIC50>=5) rises monotonically with basic-N count: 27.3% (n=935) -> 51.0% (n=522) -> 69.4% (n=36)",
+      "median_pIC50_by_basicN": {
+        "0": 4.617,
+        "1": 5.006,
+        "2": 5.514
+      }
+    },
+    "distribution_shift": "the blinded TEST set is DEPLETED in basic nitrogen: 11.6% of test compounds carry >=1 vs 18.9% of train. Mean count 0.123 vs 0.201.",
+    "handbuilt_features_insufficient": "7 explicit pharmacophore features (basic-N count, quaternary N, bond-path distances to aromatic systems, logP, aromatic rings) score RAE 1.088 alone - WORSE than no-skill. The signal is real but weak and already captured by the full feature set (RAE 0.981).",
+    "conclusion": "CYP2D6's ceiling is a genuinely orthogonal, basicity-driven SAR that the shared feature family represents poorly - not assay noise, and not fixable with hand-built pharmacophore descriptors. The test-set basicity depletion means the small amount of basicity signal available is also less useful at test time.",
+    "actionable": [
+      "train CYP2D6 separately rather than sharing representation (cross-isoform stacking helped it -0.017, but from a near-no-skill base)",
+      "CheMeleon's one win was CYP2D6 - a learned graph representation may capture what ECFP4 misses here; worth revisiting FINE-TUNED",
+      "consider protonation-state-aware or pKa-derived features rather than substructure counts"
+    ]
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "version": 3,
+  "created_at": "2026-08-06T17:06:14.627Z",
+  "task_summary": "Prepare a complete CYP inhibition challenge entry ahead of the 2026-08-17 data drop",
+  "agents": [],
+  "phases": [
+    {
+      "name": "Reconnaissance and asset build-out",
+      "delegations": [
+        {
+          "name": "Literature",
+          "steps": [
+            {
+              "title": "Survey CYP inhibition ML literature",
+              "description": "Use the literature-review skill plus programmatic access to OpenAlex/CrossRef/PubMed/bioRxiv to find and verify the state of the art in CYP1A2/2C9/2D6/3A4 inhibition prediction: PubChem AID 1851-era benchmarks, multitask and transfer-learning approaches, molecular foundation models (CheMeleon, MolFormer, Uni-Mol, MolE), and classic descriptor/GBM baselines. Record real DOIs and reported metrics; no fabricated citations."
+            },
+            {
+              "title": "Review time-dependent inhibition prediction",
+              "description": "Collect literature specifically on mechanism-based/time-dependent CYP inhibition prediction: structural alerts and reactive-metabolite substructure rules (e.g. terminal alkynes, furans, thiophenes, methylenedioxyphenyl, hydrazines, anilines), TDI/MBI QSAR models, and IC50-shift assay interpretation. This underpins the classification track."
+            },
+            {
+              "title": "Mine prior OpenADMET challenge outcomes",
+              "description": "Pull the OpenADMET blog post-mortems for the PXR induction and ExpansionRx challenges and any participant write-ups, to extract what actually won: model families, use of proprietary data, handling of low-activity compounds, and reported metric ranges. Note that the challenge organizers reuse the RAE/soft-threshold metric family."
+            },
+            {
+              "title": "Write review with method shortlist",
+              "description": "Deliver literature_review.md with a verified reference list (BibTeX) and a ranked shortlist of 5-8 candidate modeling approaches, each with expected effort, GPU requirement, and how it maps to the two tracks. Flag which approaches are plausible candidates for the Innovation in ML award."
+            }
+          ]
+        },
+        {
+          "name": "Public data",
+          "steps": [
+            {
+              "title": "Pull OpenADMET-released CYP data",
+              "description": "Download the openadmet/Octant_CYP_inhibition_reactivity_blog_release dataset (inhibition, inhibition_wells, reactivity, reactivity_wells, will_it_fly subsets) and the openadmet/pxr-challenge-train-test release. The Octant CYP3A4 inhibition DRCs were run with active-enzyme pre-incubation, matching the challenge TDI arm rather than the direct arm — record this distinction explicitly in the metadata."
+            },
+            {
+              "title": "Harvest ChEMBL CYP bioactivities",
+              "description": "Query ChEMBL via the ChEMBL connector and/or the REST API for CYP1A2, CYP2C9, CYP2D6, CYP3A4 single-protein targets, extracting IC50/Ki/AC50 inhibition records with assay type, confidence score, and units. Convert to pIC50, filter to human enzyme inhibition assays, and retain provenance columns."
+            },
+            {
+              "title": "Harvest PubChem CYP panel screens",
+              "description": "Retrieve the large qualitative CYP inhibition HTS panels from PubChem (AID 1851 and its per-isoform child assays, plus related Tox21/qHTS CYP assays), capturing both activity calls and any dose-response AC50 values. These give tens of thousands of labelled compounds for pretraining or auxiliary multitask heads."
+            },
+            {
+              "title": "Standardize and assemble corpus",
+              "description": "Build one standardization pipeline (RDKit: salt strip, neutralize, tautomer canonicalization, InChIKey14 keys), deduplicate within and across sources with aggregation of replicate measurements, and emit a versioned parquet corpus with per-isoform pIC50 columns, source flags, assay-type flags, and a data dictionary. Report per-isoform counts and value distributions."
+            },
+            {
+              "title": "Derive TDI-relevant training signal",
+              "description": "Assemble what public data can support the TDI classification track: literature/curated lists of known mechanism-based CYP3A4 and CYP2D6 inactivators, structural-alert substructure matches computed over the corpus, and any paired ±preincubation data available. Save as a labelled auxiliary table with explicit confidence tiers."
+            }
+          ]
+        },
+        {
+          "name": "Models and env",
+          "steps": [
+            {
+              "title": "Create modeling environment",
+              "description": "Create a dedicated conda environment with rdkit, scikit-learn, LightGBM/XGBoost/CatBoost, torch (CUDA for the local RTX 4080), chemprop, and descriptor/fingerprint tooling. Verify GPU availability from the kernel and record package versions."
+            },
+            {
+              "title": "Fetch and run OpenADMET baselines",
+              "description": "Download the openadmet/cyp1a2-cyp2d6-cyp3a4-cyp2c9-chemeleon-v1 and -baseline model repositories including the LFS model.pth checkpoints, install the openadmet-models Anvil framework from GitHub, and reproduce inference on the shipped compounds_for_inference.csv to confirm the pipeline runs end to end locally."
+            },
+            {
+              "title": "Inspect baseline training data",
+              "description": "Read the baselines' anvil_training/data X_train.csv and y_train.csv to recover exactly which ChEMBL-derived compounds and pIC50 targets the organizers' baseline was trained on, and its recipe YAMLs for architecture and hyperparameters. This defines the bar to beat and flags any overlap risk with challenge compounds."
+            },
+            {
+              "title": "Set up featurization and candidate models",
+              "description": "Build a reusable featurization module (ECFP4/6 counts, RDKit 2D descriptors, Avalon/MACCS, plus at least one learned representation such as CheMeleon or ChemBERTa embeddings) and train quick per-isoform models on the curated public corpus to establish reference performance under nested cross-validation. Report metrics per isoform."
+            },
+            {
+              "title": "Scope the structure track",
+              "description": "The Space source contains a third, blog-unannounced Structure Prediction track (184 structures, activated mid-challenge). Retrieve available human CYP1A2/2C9/2D6/3A4 crystal structures from the PDB, inventory the PXR challenge structure ground truth as a format template, and assess readiness of Boltz-2 or Chai-1 co-folding on the local GPU for heme-containing pocket pose prediction."
+            }
+          ]
+        },
+        {
+          "name": "Eval harness",
+          "steps": [
+            {
+              "title": "Reverse-engineer metric definitions",
+              "description": "Read the downloaded Space leaderboards.py, head_to_head.py, submission.py and utils.py to extract the exact metric names, leaderboard column conventions, macro-average pseudo-endpoint handling, bootstrap protocol (1000 resamples), and validation rules that submissions are checked against."
+            },
+            {
+              "title": "Implement ST-RAE and MA-ST-RAE",
+              "description": "Implement Soft-Threshold Relative Absolute Error from the published definition: error is the distance from the prediction to the nearest bound of the ground-truth credible interval, zero inside the interval, normalized in the RAE sense against a trivial predictor, then macro-averaged across the four regression endpoints. Include the plain RAE/MAE/R2/Spearman/Kendall battery and 1000-sample bootstrap confidence intervals."
+            },
+            {
+              "title": "Implement the TDI labeler and MCC scoring",
+              "description": "Implement the four-way TDI labeling rules exactly as specified — positive, negative, inferred positive (direct pIC50 below 4 with TDI-arm pIC50 above 4.301), assigned negative — plus MCC, accuracy, precision, recall and F1 with bootstrap CIs. Unit-test the labeler against hand-constructed edge cases around the pIC50 4 and 4.301 boundaries."
+            },
+            {
+              "title": "Build submission validator",
+              "description": "Write a local validator enforcing the published rules: exactly 750 rows, exact case-sensitive column names for each track's required columns, finite floats for pIC50, valid booleans for TDI, no NaN/inf, parquet or CSV. Generate valid dummy submission files for both tracks so the upload path can be exercised the moment data drops."
+            },
+            {
+              "title": "Verify harness on PXR challenge data",
+              "description": "Sanity-check the harness end to end using the released PXR challenge train/test files as a stand-in, confirming the metric code runs on real challenge-shaped data and produces sensible rankings for deliberately good and bad predictors."
+            }
+          ]
+        }
+      ],
+      "id": "phase-0"
+    },
+    {
+      "name": "Integration and launch readiness",
+      "delegations": [
+        {
+          "name": "Synthesis",
+          "steps": [
+            {
+              "title": "Design the validation split protocol",
+              "description": "The test set is 750 analogs from 75 potent parents (top 10 ECFP4 chemisimilars each), and the live/blind split is by chemisimilar series. Build a matching evaluation protocol on the curated corpus: scaffold and analog-series grouped cross-validation with a leave-series-out design, so local scores track the leaderboard rather than random-split optimism."
+            },
+            {
+              "title": "Benchmark candidates under the challenge metric",
+              "description": "Score the baseline CheMeleon checkpoints and our own candidate models on the curated corpus under the harness metrics and the series-grouped splits, using synthetic credible intervals to exercise ST-RAE. Produce a comparison table and figures of per-isoform performance and error distributions."
+            },
+            {
+              "title": "Assemble the strategy and gap analysis",
+              "description": "Write a strategy document consolidating the specification, data inventory, method shortlist, benchmark results, and identified gaps and risks — including the direct-versus-TDI arm mismatch in public data, the sparse-train dense-test asymmetry, activity cliffs in analog series, and the low-activity downweighting."
+            },
+            {
+              "title": "Write the go-live runbook",
+              "description": "Produce a dated, ordered runbook for 2026-08-17: what to download, the schema checks to run first, how to slot the real credible intervals into the harness, the training and submission sequence, rate-limit and single-submission-per-team constraints, and the two deadlines. Save all code as artifacts with a README."
+            }
+          ]
+        }
+      ],
+      "id": "phase-1"
+    }
+  ],
+  "desired_outputs": [
+    "Challenge specification brief (rules, endpoints, metrics, timeline, submission schema)",
+    "Literature review with verified citations and a prioritized method shortlist",
+    "Curated public CYP training corpus (standardized parquet, per-isoform pIC50 + TDI-relevant data)",
+    "Working evaluation harness implementing ST-RAE / MA-ST-RAE and MCC with bootstrap CIs",
+    "Submission file validator plus valid dummy submission files for both tracks",
+    "Verified baseline model inference (OpenADMET CheMeleon checkpoints) with benchmark numbers",
+    "Analog-series-aware cross-validation split protocol matching the test-set design",
+    "Go-live runbook and gap analysis for 2026-08-17"
+  ],
+  "feasibility": {
+    "rationale": "All challenge rules, endpoints, metrics and the submission schema were recovered from the announcement and the live Hugging Face Space source, so preparation can be grounded in the real specification. The exact ST-RAE implementation and the credible intervals it depends on live in the organizers' private backend and in the unreleased data, so our harness will be a faithful reimplementation from the published definition rather than a byte-exact copy.",
+    "confidence": "high"
+  }
+}

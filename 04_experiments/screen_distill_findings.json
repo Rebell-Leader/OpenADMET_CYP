@@ -1,0 +1,44 @@
+{
+  "experiment": "single-concentration screen distillation",
+  "date": "2026-08-22",
+  "motivation": "screen is dense (4,376 x 4 isoforms) where DRC is sparse; observed log2fc correlates with same-isoform DRC pIC50 at Spearman -0.862/-0.896/-0.828/-0.936",
+  "why_distillation_and_not_direct_use": "ZERO of the 750 blinded test compounds appear in the screen file (checked by both Molecule_Name and SMILES), so observed log2fc is unavailable at test time",
+  "donor_ceiling_structure_to_log2fc_scaffoldCV": {
+    "CYP1A2": {
+      "rho": 0.578,
+      "R2": 0.301
+    },
+    "CYP2C9": {
+      "rho": 0.707,
+      "R2": 0.488
+    },
+    "CYP2D6": {
+      "rho": 0.514,
+      "R2": 0.314
+    },
+    "CYP3A4": {
+      "rho": 0.712,
+      "R2": 0.495
+    },
+    "mean_R2": 0.4
+  },
+  "result_nested_MA_ST_RAE": 0.7583535851830809,
+  "baseline_tabicl_n32_MA_ST_RAE": 0.7226,
+  "delta": 0.035753585183080916,
+  "per_isoform_delta": {
+    "CYP1A2": 0.0243,
+    "CYP2C9": 0.0714,
+    "CYP2D6": 0.0359,
+    "CYP3A4": 0.0114
+  },
+  "verdict": "NEGATIVE. Worse on all four isoforms (+0.011 to +0.071, macro +0.036).",
+  "leak_measured_CYP1A2": {
+    "naive_ST_RAE": 0.2771,
+    "naive_R2": 0.8343,
+    "nested_ST_RAE": 0.8342,
+    "nested_R2": 0.2162,
+    "leak": 0.5571
+  },
+  "why_it_fails": "The predicted surrogate is a deterministic function of the same structural features the pIC50 model already receives, so no new information enters -- only a lossy re-encoding of Btr, which costs the model capacity. Contrast v2 cross-isoform stacking, where donors were trained on DIFFERENT COMPOUNDS (other isoforms' labels on largely non-overlapping sets) and genuinely added information: leak there was 0.0008 and the gain survived at -0.009.",
+  "generalisable_lesson": "A dense auxiliary label measured on the SAME compounds as the target adds nothing once it must be predicted from structure. Auxiliary data helps when it covers compounds the target labels do not, not when it re-describes compounds already labelled."
+}

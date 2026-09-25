@@ -1,0 +1,91 @@
+{
+  "checked_at": "2026-08-17",
+  "space_phase": 1,
+  "space_last_modified": "2026-08-17T15:42:26Z",
+  "dataset": "openadmet/cyp-challenge-train-test",
+  "dataset_last_modified": "2026-08-06T20:25:31Z",
+  "tutorial_repo": "https://github.com/OpenADMET/CYP-Challenge-Tutorial",
+  "structure_track_live": false,
+  "files": {
+    "TRAIN_inhibition": [
+      4905,
+      18
+    ],
+    "TEST_BLINDED": [
+      750,
+      2
+    ],
+    "TRAIN_TDI": [
+      6145,
+      36
+    ],
+    "single_concentration": [
+      17504,
+      12
+    ],
+    "TRAIN_Emax": [
+      6146,
+      30
+    ]
+  },
+  "schema_resolutions": {
+    "identifier_column": "Molecule_Name (underscore) - as the Space required",
+    "ci_columns": "{endpoint}_conf_low / {endpoint}_conf_high  (NOT ci_lower/ci_upper)",
+    "std_columns": "{endpoint}_std",
+    "tdi_arm_column": "{iso}_pIC50_TDI_condition  (our guess {iso}_pIC50_tdi was wrong)",
+    "direct_arm_column": "{iso}_pIC50_direct_inhibition",
+    "test_ground_truth": "labels AND credible intervals withheld -> ST-RAE cannot be computed locally on test"
+  },
+  "tdi_rule_recovered": {
+    "agreement": "1.0000 on 5080 released labels (1497 CYP2D6 + 3583 CYP3A4)",
+    "band_direct_lt4_tdi_4_to_4p301": "NEGATIVE (18/18 CYP2D6, 159/159 CYP3A4) - was undefined in the FAQ",
+    "missing_direct_arm": "NEGATIVE regardless of TDI-arm value (1249/1249 CYP3A4, 4/4 CYP2D6; 1055 have TDI pIC50>4.301)",
+    "impact": "34.8% of CYP3A4 labels lack a direct arm; treating them as inferred positives would move positive rate 21.3%->50.8%"
+  },
+  "train_coverage": {
+    "CYP1A2": 1412,
+    "CYP2C9": 1285,
+    "CYP2D6": 1493,
+    "CYP3A4": 2335
+  },
+  "train_frac_below_floor": {
+    "CYP1A2": 0.1643059490084986,
+    "CYP2C9": 0.20155642023346304,
+    "CYP2D6": 0.08640321500334897,
+    "CYP3A4": 0.4042826552462527
+  },
+  "train_sparsity_by_n_isoforms": {
+    "1": 3596,
+    "2": 1039,
+    "3": 229,
+    "4": 41
+  },
+  "leakage": {
+    "test_train_exact_name_overlap": 0,
+    "test_train_exact_smiles_overlap": 0,
+    "test_to_train_NN_tanimoto_median": 0.5873016119003296,
+    "test_frac_with_train_analog_ge_0.5": 0.9573333333333334,
+    "public_corpus_overlap_with_test": 5
+  },
+  "analog_density": {
+    "train_internal_NN_median": 0.44999998807907104,
+    "test_internal_NN_median": 0.6557376980781555,
+    "train_frac_NN_ge_0.55": 0.17329255861365953,
+    "test_frac_NN_ge_0.55": 0.8533333333333334
+  },
+  "baseline_MA_ST_RAE_scaffold_grouped": 0.7632179889025019,
+  "baseline_MA_ST_RAE_with_public_aug": 0.820201912092381,
+  "tdi_macro_MCC_scaffold_grouped": 0.25334150999820026,
+  "tdi_per_isoform_MCC": {
+    "CYP2D6": {
+      "best_MCC": 0.09846950479665037,
+      "best_thr": 0.4799999999999999
+    },
+    "CYP3A4": {
+      "best_MCC": 0.40821351519975013,
+      "best_thr": 0.18
+    }
+  },
+  "subfloor_exploit": "blanket mid-range guessing on sub-4 compounds LOSES badly (mean ST-RAE 0.74 vs 0.21 for honest prediction); CI-midpoint on sub-4 is neutral (0.218 vs 0.211). No exploit.",
+  "validators": "our validate_submission.py and the organizers' official validation/*.py both PASS on both submissions"
+}

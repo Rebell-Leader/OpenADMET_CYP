@@ -1,0 +1,18 @@
+# Pinned from the environment every number in this repo was computed in.
+# See 01_env/REBUILD.md for the two non-obvious dependencies and the GPU note.
+# 01_env/pip_freeze.txt is the exhaustive lock if you need byte-identical.
+
+numpy==2.4.6
+pandas==3.0.5
+scipy==1.18.0
+scikit-learn==1.9.0
+lightgbm==4.7.0
+rdkit==2026.3.4
+tabicl==2.1.1
+torch==2.13.0
+matplotlib==3.11.1
+pyarrow==25.0.0
+pytest==9.1.1
+chemprop==2.3.1
+huggingface-hub==1.28.0
+socksio==1.0.0

@@ -1,0 +1,115 @@
+{
+  "announcement_url": "https://openadmet.ghost.io/announcing-openadmets-cyp-inhibition-blind-challenge/",
+  "space_url": "https://huggingface.co/spaces/openadmet/cyp-challenge",
+  "announcement_doi": "10.5281/zenodo.21789716",
+  "space_last_modified": "2026-08-05T03:52:31.000Z",
+  "current_phase_flag": 0,
+  "isoforms": [
+    "CYP1A2",
+    "CYP2C9",
+    "CYP2D6",
+    "CYP3A4"
+  ],
+  "regression_endpoints": [
+    "CYP1A2_pIC50_direct_inhibition",
+    "CYP2C9_pIC50_direct_inhibition",
+    "CYP2D6_pIC50_direct_inhibition",
+    "CYP3A4_pIC50_direct_inhibition"
+  ],
+  "classification_endpoints": [
+    "CYP2D6_is_TDI",
+    "CYP3A4_is_TDI"
+  ],
+  "identifier_columns": [
+    "SMILES",
+    "Molecule_Name"
+  ],
+  "activity_dataset_size": 750,
+  "structure_dataset_size": 184,
+  "structure_track_live_flag": true,
+  "classification_active_flag": true,
+  "hours_between_submissions": 4,
+  "primary_metrics": {
+    "regression": "MA-ST-RAE (macro-averaged soft-threshold relative absolute error)",
+    "classification": "MCC",
+    "structure": "pose (single leaderboard, slug 'structure')"
+  },
+  "secondary_metrics": {
+    "regression": [
+      "RAE",
+      "MAE",
+      "R2",
+      "Spearman_R",
+      "Kendall_Tau"
+    ],
+    "classification": [
+      "MCC",
+      "Accuracy",
+      "Precision",
+      "Recall",
+      "F1"
+    ]
+  },
+  "bootstrap_resamples": 1000,
+  "macro_endpoint_label": "MA",
+  "tdi_label_rules": {
+    "positive": "direct pIC50 > 4 AND TDI shift > 2-fold (log10 2 = 0.301)",
+    "negative": "direct pIC50 > 4 AND shift <= 2-fold",
+    "inferred_positive": "direct pIC50 < 4 AND TDI-arm pIC50 > 4.301",
+    "assigned_negative": "direct pIC50 < 4 AND TDI-arm pIC50 < 4",
+    "scored_positive_class": "positives + inferred positives",
+    "scored_negative_class": "negatives + assigned negatives"
+  },
+  "st_rae_definition": "error = distance from prediction to nearest bound of ground-truth pIC50 credible interval; 0 if inside interval; RAE-normalised; macro-averaged over 4 endpoints",
+  "timeline": {
+    "announced": "2026-07-29",
+    "launch_data_release_submissions_open": "2026-08-17",
+    "intermediate_submission_deadline": "2026-09-24T23:59Z",
+    "intermediate_leaderboard": "2026-09-25",
+    "final_deadline": "2026-11-03T23:59Z",
+    "wrapup_from": "2026-11-04"
+  },
+  "dataset_design": {
+    "libraries": [
+      "Enamine DDS10 diversity",
+      "FDAA FDA-approved"
+    ],
+    "primary_screen": "single concentration, run in +NADPH (TDI) condition",
+    "train": "~1500 12-point DRCs per CYP, Bayesian curve fit, BOTH arms -> sparse matrix",
+    "test": "hit expansion: top 25 hits/CYP for CYP1A2+CYP2C9+CYP3A4 (75 parents) x top 10 ECFP4 Tanimoto chemisimilars from Enamine US in-stock = 750 cmpds, DENSE across all 4 CYPs",
+    "leaderboard_split": "half test set live leaderboard, split BY CHEMISIMILAR SERIES (whole parent series stays in one side)"
+  },
+  "assays": {
+    "CYP3A4": "fluorogenic DBOMF, 1536-well",
+    "CYP1A2": "fluorogenic EOMCC",
+    "CYP2C9": "fluorogenic EOMCC",
+    "CYP2D6": "label-free Echo-MS (AEMS) dextromethorphan parent depletion, SCIEX ZenoTOF 7600",
+    "format": "biochemical (not cell-based), recombinant enzyme, NADPH-driven",
+    "tdi_design": "IC50-shift: preincubation +/- NADPH before probe addition"
+  },
+  "rules": {
+    "one_submission_per_team_lab": true,
+    "external_and_pretrained_data_allowed": true,
+    "proprietary_data_disclosure_required": true,
+    "open_code_checkbox": true,
+    "innovation_in_ml_award": true,
+    "single_stage_no_midpoint_unblinding": true,
+    "latest_valid_submission_counts": true
+  },
+  "submission_file": {
+    "formats": [
+      "parquet (preferred)",
+      "csv"
+    ],
+    "rows": "exactly 750",
+    "columns": "case-sensitive exact match; all required and fully populated; pIC50 finite floats; TDI valid booleans",
+    "tracks_are_independent_files": true
+  },
+  "unannounced_in_blog": "Space source config.py + models.py define a third track 'Structure Prediction' (pose), 184 structures, STRUCTURE_TRACK_LIVE=True, starts halfway through challenge",
+  "open_questions": [
+    "exact ST-RAE normalisation denominator (trivial predictor definition) not published",
+    "credible interval width/level for test pIC50 not published (PXR used Bayesian DRC fits)",
+    "dataset download link and tutorial repo not yet published (DATASET_DOWNLOAD_LINK=False, TUTORIAL_LINK=False)",
+    "structure track target isoform(s) and scoring metric not published"
+  ]
+}

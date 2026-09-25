@@ -1,0 +1,65 @@
+{
+  "split_regime_RAE": "{('CYP1A2', 'random'): 0.6754, ('CYP1A2', 'scaffold_grouped'): 0.7261, ('CYP1A2', 'analog_series_grouped'): 0.6805, ('CYP2C9', 'random'): 0.8574, ('CYP2C9', 'scaffold_grouped'): 0.8961, ('CYP2C9', 'analog_series_grouped'): 0.8636, ('CYP2D6', 'random'): 0.7963, ('CYP2D6', 'scaffold_grouped'): 0.8471, ('CYP2D6', 'analog_series_grouped'): 0.7998, ('CYP3A4', 'random'): 0.7599, ('CYP3A4', 'scaffold_grouped'): 0.8063, ('CYP3A4', 'analog_series_grouped'): 0.7584}",
+  "challenge_matched_RAE": "{('CYP1A2', 'series_held_out'): 0.5991, ('CYP1A2', 'parent_in_train_analogs_out'): 0.6016, ('CYP2C9', 'series_held_out'): 0.7828, ('CYP2C9', 'parent_in_train_analogs_out'): 0.8028, ('CYP2D6', 'series_held_out'): 0.7628, ('CYP2D6', 'parent_in_train_analogs_out'): 0.794, ('CYP3A4', 'series_held_out'): 0.7171, ('CYP3A4', 'parent_in_train_analogs_out'): 0.7162}",
+  "octant_external_benchmark": [
+    {
+      "predictor": "LightGBM_ecfp4+rdkit2d (ChEMBL/PubChem-trained)",
+      "ST_RAE": 0.8701,
+      "mean_st_ae": 0.5212,
+      "frac_inside_CI": 0.0876,
+      "MAE": 0.6401,
+      "R2": 0.1168,
+      "Spearman_R": 0.4715,
+      "Kendall_Tau": 0.3316
+    },
+    {
+      "predictor": "mean_of_train",
+      "ST_RAE": 1.0117,
+      "mean_st_ae": 0.606,
+      "frac_inside_CI": 0.0609,
+      "MAE": 0.7262,
+      "R2": -0.002,
+      "Spearman_R": NaN,
+      "Kendall_Tau": NaN
+    },
+    {
+      "predictor": "mean_of_test(oracle-ish)",
+      "ST_RAE": 1.0,
+      "mean_st_ae": 0.599,
+      "frac_inside_CI": 0.0572,
+      "MAE": 0.7198,
+      "R2": 0.0,
+      "Spearman_R": NaN,
+      "Kendall_Tau": NaN
+    },
+    {
+      "predictor": "perfect",
+      "ST_RAE": 0.0,
+      "mean_st_ae": 0.0,
+      "frac_inside_CI": 1.0,
+      "MAE": 0.0,
+      "R2": 1.0,
+      "Spearman_R": 1.0,
+      "Kendall_Tau": 1.0
+    },
+    {
+      "predictor": "midrange_guess_5.0",
+      "ST_RAE": 1.0951,
+      "mean_st_ae": 0.6559,
+      "frac_inside_CI": 0.0729,
+      "MAE": 0.7758,
+      "R2": -0.0511,
+      "Spearman_R": NaN,
+      "Kendall_Tau": NaN
+    }
+  ],
+  "octant_ci_width_median_all": 0.09416799999999981,
+  "octant_ci_width_median_below4": 2.0260382500000005,
+  "octant_ci_width_median_above4": 0.0882517500000004,
+  "octant_ci_ratio": 22.957485262331808,
+  "octant_frac_below_floor": 0.07656826568265683,
+  "corpus_n_compounds": 33310,
+  "corpus_n_series_T055": 16750,
+  "corpus_frac_in_multimember_series": 0.6666166316421495,
+  "emulated_testset_analog_tanimoto_median": 0.4194999933242798
+}

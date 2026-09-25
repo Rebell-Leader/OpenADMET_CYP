@@ -1,0 +1,15 @@
+# Regenerable feature caches (61 MB). Rebuild with:  python 03_code/build_features.py
+04_experiments/cache/*.npy
+04_experiments/cache/*.parquet
+
+# Foundation-encoder checkpoint (34.9 MB). Fetch with:  bash 01_env/fetch_checkpoints.sh
+01_env/checkpoints/
+
+# Scratch
+99_scratch/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+*.log
+.pytest_cache/

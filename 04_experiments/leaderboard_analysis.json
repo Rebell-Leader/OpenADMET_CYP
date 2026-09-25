@@ -1,0 +1,56 @@
+{
+  "leaderboard_read_at": "2026-08-18",
+  "our_username": "avaliev",
+  "regression": {
+    "rank": 8,
+    "of": 16,
+    "MA_ST_RAE": 0.889756,
+    "std": 0.029534,
+    "statistically_tied_with_rank1": false,
+    "tied_with": [
+      "LGBM-baseline (z=0.08)",
+      "XGB-baseline (z=0.19)",
+      "Asidsal11",
+      "JustTheBasics",
+      "NorthCoil"
+    ],
+    "rank1": "TabICL-baseline 0.675491",
+    "entries_tied_with_rank1": 1,
+    "note": "TabICL is the only entry in its statistical tier; rank 2 is 2.69 sigma behind it"
+  },
+  "classification": {
+    "rank": 1,
+    "of": 6,
+    "MA_MCC": 0.330567,
+    "std": 0.055262,
+    "entries_tied_with_rank1": 6,
+    "note": "we lead but ALL six entries are statistically indistinguishable (max z=0.76)"
+  },
+  "local_vs_leaderboard": {
+    "local_MA_ST_RAE_scaffold_grouped": 0.7632,
+    "leaderboard": 0.8898,
+    "optimism": 0.1265,
+    "local_MA_MAE": 0.5777,
+    "leaderboard_MA_MAE": 0.9987,
+    "implied_test_spread": 1.122,
+    "train_spread": 0.718,
+    "diagnosis": "test set is absolutely harder AND wider-spread than train; the larger RAE denominator cushioned ST-RAE while MAE rose 73%"
+  },
+  "hypotheses_tested_and_rejected": {
+    "variance_expansion_recalibration": "REJECTED - optimal alpha = 1.00 on all four isoforms; expanding prediction spread to match label sd degrades MA-ST-RAE 0.763 -> 1.004. Under an L1-type metric shrinkage toward the conditional median is correct.",
+    "ranks_well_magnitudes_poorly": "NOT SUPPORTED - we are within noise of the field median on both ST-RAE (z=-0.04) and Spearman (z=+0.64).",
+    "public_data_augmentation": "REJECTED earlier - degrades MA-ST-RAE 0.763 -> 0.820"
+  },
+  "improvements_found": {
+    "TabICL_svd128_plus_desc": 0.7243,
+    "TabICL_svd256_plus_desc": 0.7239,
+    "TabICL_descriptors_only": 0.7418,
+    "TabICL_plus_cross_isoform_stacking": 0.7142,
+    "LightGBM_submitted": 0.7632,
+    "total_local_gain": 0.049,
+    "wins_on_all_four_isoforms": true,
+    "feature_capacity_saturated": "SVD128 vs SVD256 differ by 0.0004 - the bottleneck is not fingerprint compression"
+  },
+  "remaining_gap_to_leader": "our best local 0.7142 vs TabICL-baseline leaderboard 0.6755; the organizers' baseline likely uses a stronger molecular representation than SVD-compressed ECFP4 + RDKit-2D",
+  "cyp2d6": "resists every method tried: ST-RAE 0.91-0.98 (near no-skill) and TDI MCC 0.098. Distinct assay readout (Echo-MS dextromethorphan depletion vs fluorogenic probes for the other three)."
+}

@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+title: >-
+  What transfers and what leaks: an ablation study on the OpenADMET
+  CYP inhibition blind challenge
+message: If you use this code or the reported ablations, please cite this repository.
+type: software
+authors:
+  - alias: Rebell-Leader
+    # Replace with full author metadata (name, ORCID, affiliation) before any
+    # formal release -- CFF placeholders should not ship in a citable artefact.
+repository-code: https://github.com/Rebell-Leader/OpenADMET_CYP
+license: MIT
+keywords:
+  - cytochrome P450
+  - CYP inhibition
+  - ADMET
+  - QSAR
+  - blind challenge
+  - multitask learning
+  - in-context learning
+  - data leakage
+references:
+  - type: data
+    title: OpenADMET CYP challenge train/test release
+    url: https://huggingface.co/datasets/openadmet/cyp-challenge-train-test
+  - type: article
+    title: Announcing OpenADMET's CYP inhibition blind challenge
+    url: https://openadmet.ghost.io/announcing-openadmets-cyp-inhibition-blind-challenge/
+    doi: 10.5281/zenodo.21789716

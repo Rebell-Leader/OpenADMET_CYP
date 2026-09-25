@@ -1,0 +1,151 @@
+{
+  "env": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "scikit-learn": "1.9.0",
+    "lightgbm": "4.7.0",
+    "rdkit": "2026.3.4",
+    "tabicl": "2.1.1",
+    "tabpfn": "8.3.0",
+    "torch": "2.13.0",
+    "scipy": "1.18.0"
+  },
+  "python": "3.12.13",
+  "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU",
+  "lgb_regressor_params": {
+    "n_estimators": 600,
+    "learning_rate": 0.05,
+    "num_leaves": 63,
+    "min_child_samples": 10,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.4,
+    "reg_lambda": 1.0,
+    "n_jobs": 16,
+    "verbosity": -1,
+    "random_state": 0
+  },
+  "lgb_classifier_params": {
+    "n_estimators": 500,
+    "learning_rate": 0.05,
+    "num_leaves": 31,
+    "min_child_samples": 20,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.4,
+    "reg_lambda": 1.0,
+    "n_jobs": 16,
+    "verbosity": -1,
+    "random_state": 0
+  },
+  "desc_count": 217,
+  "svd128_explained_var": 0.5538977384567261,
+  "svd256_explained_var": 0.6866703033447266,
+  "feature_dims": {
+    "X_full_ecfp4_plus_desc": [
+      4905,
+      2265
+    ],
+    "R_svd128_plus_desc": [
+      4905,
+      345
+    ],
+    "B_svd256_plus_desc": [
+      4905,
+      473
+    ],
+    "A_desc_only": [
+      4905,
+      217
+    ],
+    "C_cross_isoform": [
+      4905,
+      4
+    ]
+  },
+  "n_scaffold_groups_train": 4520,
+  "n_scaffold_groups_tdi": 5367,
+  "tdi_thresholds": {
+    "CYP2D6": {
+      "best_thr": 0.4799999999999999,
+      "best_MCC": 0.09846950479665037,
+      "MCC_at_0p5": 0.07503785404489804,
+      "pos_rate": 0.21643286573146292,
+      "n": 1497
+    },
+    "CYP3A4": {
+      "best_thr": 0.18,
+      "best_MCC": 0.40821351519975013,
+      "MCC_at_0p5": 0.31248997013299096,
+      "pos_rate": 0.21316964285714285,
+      "n": 3584
+    }
+  },
+  "checksums": {
+    "submission_regression.parquet": "09a146090596c318",
+    "submission_classification.parquet": "948a2dcc9416a78c",
+    "submission_regression_v2.parquet": "c40b2833cf922588"
+  },
+  "train_n_per_isoform": {
+    "CYP1A2": 1412,
+    "CYP2C9": 1285,
+    "CYP2D6": 1493,
+    "CYP3A4": 2335
+  },
+  "v1_pred_stats": {
+    "CYP1A2": {
+      "min": 2.840187233902217,
+      "max": 6.8503215352153966,
+      "mean": 4.97816866340463,
+      "sd": 0.6997637102757015
+    },
+    "CYP2C9": {
+      "min": 2.6659889056427684,
+      "max": 6.519043879535384,
+      "mean": 4.734999358867151,
+      "sd": 0.7139628133493289
+    },
+    "CYP2D6": {
+      "min": 2.6754160184439475,
+      "max": 6.243521444811213,
+      "mean": 4.630467195468528,
+      "sd": 0.46583473324771246
+    },
+    "CYP3A4": {
+      "min": 2.0524076251492933,
+      "max": 6.410779440843366,
+      "mean": 4.536412981148748,
+      "sd": 0.8766989976182264
+    }
+  },
+  "v2_pred_stats": {
+    "CYP1A2": {
+      "min": 3.2812283039093018,
+      "max": 6.18897819519043,
+      "mean": 5.015267372131348,
+      "sd": 0.6374118328094482
+    },
+    "CYP2C9": {
+      "min": 2.892376184463501,
+      "max": 6.267667770385742,
+      "mean": 4.845401763916016,
+      "sd": 0.6751159429550171
+    },
+    "CYP2D6": {
+      "min": 3.56154727935791,
+      "max": 6.1367573738098145,
+      "mean": 4.653175354003906,
+      "sd": 0.4379013776779175
+    },
+    "CYP3A4": {
+      "min": 2.2274930477142334,
+      "max": 7.017175197601318,
+      "mean": 4.705249309539795,
+      "sd": 0.9787377715110779
+    }
+  },
+  "v1_tdi_test_pos_rate": {
+    "CYP2D6": 0.029333333333333333,
+    "CYP3A4": 0.34
+  }
+}

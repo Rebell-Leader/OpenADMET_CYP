@@ -1,0 +1,179 @@
+{
+  "recorded_utc": "2026-08-06T18:13:56.729928+00:00",
+  "purpose": "OpenADMET CYP Inhibition Blind Challenge \u2014 modelling + structure envs",
+  "host": {
+    "nvidia_smi_driver": "595.84, NVIDIA GeForce RTX 4080 Laptop GPU, 12282 MiB"
+  },
+  "environments": {
+    "cyp-models": {
+      "conda_prefix": "/home/obi/.claude-science/conda/envs/cyp-models",
+      "role": "featurization + gradient-boosted / GNN modelling",
+      "python": "3.12.13",
+      "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.43",
+      "packages": {
+        "rdkit": "2026.3.4",
+        "scikit-learn": "1.9.0",
+        "lightgbm": "4.7.0",
+        "xgboost": "3.3.0",
+        "catboost": "1.2.10",
+        "pandas": "3.0.5",
+        "numpy": "2.4.6",
+        "scipy": "1.18.0",
+        "pyarrow": "25.0.0",
+        "matplotlib": "3.11.1",
+        "seaborn": "0.13.2",
+        "chemprop": "2.3.1",
+        "lightning": "2.6.5",
+        "pytorch-lightning": "2.6.5",
+        "descriptastorus": "2.8.0",
+        "mordredcommunity": "2.0.7",
+        "datamol": "0.12.5",
+        "umap-learn": "0.5.12",
+        "requests": "2.34.2",
+        "loguru": "0.7.3"
+      },
+      "torch": {
+        "version": "2.13.0+cu130",
+        "cuda_available": true,
+        "cuda_version": "13.0",
+        "cudnn": 92000,
+        "device_count": 1,
+        "device_name": "NVIDIA GeForce RTX 4080 Laptop GPU",
+        "capability": [
+          8,
+          9
+        ],
+        "total_vram_GiB": 11.6
+      }
+    },
+    "openadmet-models": {
+      "conda_prefix": "/home/obi/.claude-science/conda/envs/openadmet-models",
+      "role": "official Anvil framework, baseline reproduction",
+      "python": "3.12.13",
+      "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.43",
+      "packages": {
+        "rdkit": "2026.3.4",
+        "scikit-learn": "1.9.0",
+        "lightgbm": null,
+        "xgboost": null,
+        "catboost": null,
+        "pandas": "3.0.5",
+        "numpy": "2.5.1",
+        "scipy": "1.18.0",
+        "pyarrow": "25.0.0",
+        "matplotlib": "3.11.1",
+        "seaborn": "0.13.2",
+        "chemprop": "2.3.1",
+        "lightning": "2.6.1",
+        "pytorch-lightning": "2.6.5",
+        "descriptastorus": "2.8.0",
+        "mordredcommunity": "2.0.7",
+        "datamol": "0.12.5",
+        "umap-learn": null,
+        "requests": "2.34.2",
+        "loguru": "0.7.3",
+        "openadmet-models": "0.2.0+8.g6077d12",
+        "molfeat": "0.11.1.dev301+gcfe2abb4d",
+        "boto3": "1.43.65",
+        "hyperopt": "0.3.0",
+        "splito": "0.1.4",
+        "click": "8.4.2",
+        "pydantic": "2.13.4",
+        "phx-class-registry": "5.2.2"
+      },
+      "torch": {
+        "version": "2.13.0+cu130",
+        "cuda_available": true,
+        "cuda_version": "13.0",
+        "cudnn": 92000,
+        "device_count": 1,
+        "device_name": "NVIDIA GeForce RTX 4080 Laptop GPU",
+        "capability": [
+          8,
+          9
+        ],
+        "total_vram_GiB": 11.6
+      }
+    },
+    "boltz2": {
+      "conda_prefix": "/home/obi/.claude-science/conda/envs/boltz2",
+      "role": "Boltz-2 co-folding for the structure track",
+      "python": "3.12.13",
+      "platform": "Linux-7.0.0-28-generic-x86_64-with-glibc2.43",
+      "packages": {
+        "boltz": "2.2.1",
+        "torch": "2.13.0",
+        "numpy": "1.26.4",
+        "pandas": "3.0.5",
+        "rdkit": "2026.3.5"
+      },
+      "torch": {
+        "version": "2.13.0+cu130",
+        "cuda_available": true,
+        "cuda_version": "13.0",
+        "cudnn": 92000,
+        "device_count": 1,
+        "device_name": "NVIDIA GeForce RTX 4080 Laptop GPU",
+        "capability": [
+          8,
+          9
+        ],
+        "total_vram_GiB": 11.6
+      }
+    }
+  },
+  "external_assets": {
+    "chemeleon_foundation_weights": {
+      "url": "https://zenodo.org/records/15460715/files/chemeleon_mp.pt",
+      "bytes": 34859448,
+      "md5": "6a80b54fdb7de37ef0374d302f01e8ce",
+      "hyper_parameters": {
+        "d_v": 72,
+        "d_e": 14,
+        "d_h": 2048,
+        "depth": 6,
+        "bias": false,
+        "dropout": 0.0,
+        "activation": "relu",
+        "undirected": false
+      },
+      "note": "fetched at ChemPropModel.build() time; NOT shipped in either HF model repo"
+    },
+    "boltz2_ccd_library": {
+      "url": "https://huggingface.co/boltz-community/boltz-2/resolve/main/mols.tar",
+      "bytes": 1855662080,
+      "n_components": 45227,
+      "local_path": "boltz_cache/mols",
+      "HEM_present": true,
+      "HEM": {
+        "n_atoms": 43,
+        "formula": "C34H32FeN4O4",
+        "n_conformers": 10,
+        "has_Fe": true
+      },
+      "HEC_present": true
+    }
+  },
+  "network_grants_required": [
+    "zenodo.org (CheMeleon foundation weights)",
+    "api.colabfold.com (Boltz MSA server)"
+  ],
+  "known_issues": [
+    "conda-forge pytorch-gpu is uninstallable here: solver reports the __cuda virtual package missing even though /dev/nvidia0 and libcuda.so.1 are present. Use PyPI torch wheels (bundle CUDA) instead.",
+    "Anvil recipes ship feat.params.n_jobs=4; DataLoader worker processes cannot be forked in this sandbox and `openadmet predict` hangs indefinitely. Set featurizer n_jobs=0 before predicting.",
+    "openadmet-models pulls molfeat from the OpenADMET fork (git+https://github.com/OpenADMET/molfeat.git@main); PyPI molfeat is not a substitute for the CLI import chain.",
+    "TMPDIR and $HOME are per-cell in this sandbox; write large caches under /home/obi/AMP_challenge (BOLTZ_CACHE) rather than ~/.boltz or /tmp."
+  ],
+  "structure_track_runtime_measurement": {
+    "tool": "boltz 2.2.1",
+    "target": "CYP3A4 (UniProt P08684, 503 aa) + ccd:HEM + ketoconazole SMILES",
+    "settings": "--diffusion_samples 1 --recycling_steps 1 --sampling_steps 100 --no_kernels --use_msa_server",
+    "gpu": "NVIDIA GeForce RTX 4080 Laptop GPU (12282 MiB)",
+    "vram_used_MiB": 2796,
+    "outcome": "interrupted after >36 min GPU wall without completing diffusion; MSA and preprocessing completed",
+    "per_complex_lower_bound_minutes": 36,
+    "extrapolated_184_structures_gpu_hours_lower_bound": 110,
+    "conclusion": "local co-folding of 184 complexes not viable; use template docking into holo CYP3A4 crystal structures, or rented A100/H100",
+    "heme_ccd_accepted": true
+  }
+}
