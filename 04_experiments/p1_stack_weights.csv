@@ -1,0 +1,5 @@
+target,chemberta,chemprop_mt,chemprop_pre,chemprop_prot,lgbm_fp,lgbm_prot,public_lgbm,tabicl_svd
+CYP1A2_pIC50_direct_inhibition,0.0,0.1211,0.2257,0.1687,0.0,0.4208,0.0637,0.0
+CYP2C9_pIC50_direct_inhibition,0.0,0.0,0.4278,0.0983,0.0,0.171,0.0,0.3028
+CYP2D6_pIC50_direct_inhibition,0.0,0.0525,0.1354,0.1653,0.0,0.2874,0.1479,0.2115
+CYP3A4_pIC50_direct_inhibition,0.0,0.167,0.2593,0.0234,0.0862,0.2004,0.0,0.2636

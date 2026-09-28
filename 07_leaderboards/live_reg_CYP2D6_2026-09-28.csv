@@ -1,0 +1,235 @@
+Rank,Username,Submitted,Model Report Link,ST-RAE,MAE,R²,Spearman's ρ,Kendall's τ,Proprietary Data,Open Code
+1,wbot,2026-09-24 19:53 UTC,Not submitted,0.4278,0.9168,0.4598,0.5247,0.364,No,No
+2,preheat-to-450,2026-09-27 20:26 UTC,Not submitted,0.4389,1.0151,0.3324,0.5317,0.3778,No,No
+3,Rubyy,2026-09-23 09:13 UTC,Not submitted,0.4577,0.9836,0.3525,0.5321,0.3741,No,No
+4,leebrubeck,2026-09-14 18:38 UTC,Not submitted,0.4618,0.8473,0.5289,0.5407,0.3772,No,No
+5,first-chair,2026-09-14 17:51 UTC,Not submitted,0.4632,0.856,0.5354,0.5475,0.3821,No,No
+6,Autopilot (fully autonomous agent entry),2026-09-14 23:46 UTC,Not submitted,0.4797,0.9565,0.425,0.5411,0.3769,No,No
+7,beast,2026-09-27 14:18 UTC,Not submitted,0.488,1.0238,0.3538,0.5561,0.3851,No,No
+8,EleanorRigby,2026-09-24 13:31 UTC,Not submitted,0.4887,1.0356,0.3521,0.5527,0.3885,No,No
+9,Tutu,2026-09-25 06:18 UTC,Not submitted,0.4889,0.8468,0.5125,0.5466,0.3854,No,No
+10,C_CYPher-cypext-B1cal-restore,2026-09-14 13:52 UTC,Not submitted,0.5018,0.9051,0.4627,0.5482,0.3919,No,No
+11,grapefruit,2026-09-28 10:19 UTC,Not submitted,0.5049,0.9721,0.39,0.5191,0.3635,No,No
+12,Cheminfo,2026-09-22 01:57 UTC,Not submitted,0.5072,1.0149,0.3559,0.5562,0.4325,No,No
+13,cypadeedoodah,2026-09-28 06:50 UTC,Not submitted,0.509,1.0039,0.3711,0.53,0.3653,No,No
+14,SVM,2026-09-25 08:25 UTC,Not submitted,0.5281,1.0277,0.2532,0.5069,0.3512,No,No
+15,psk,2026-09-24 18:57 UTC,Not submitted,0.5301,0.9935,0.3805,0.5071,0.3522,Yes,No
+16,"<a target=""_blank"" href=""https://huggingface.co/rasayan-labs"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">rasayan-labs</a>",2026-09-25 09:33 UTC,"<a target=""_blank"" href=""https://github.com/whis9/rasayan-cyp"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">link</a>",0.5301,0.9935,0.3805,0.5071,0.3522,No,No
+17,C_CYPher-cypextmmg-B1cal,2026-09-27 02:06 UTC,Not submitted,0.5369,0.9257,0.435,0.5264,0.3715,No,No
+18,Scigantic,2026-09-27 00:37 UTC,Not submitted,0.5373,0.9859,0.3985,0.5084,0.3548,No,No
+19,CoSy,2026-09-18 15:45 UTC,Not submitted,0.5404,1.0015,0.329,0.5072,0.3532,No,No
+20,JSHCF,2026-09-23 14:49 UTC,Not submitted,0.5457,0.9907,0.3555,0.4961,0.3482,No,No
+21,curiousone,2026-09-25 21:30 UTC,Not submitted,0.5494,0.9935,0.3769,0.4894,0.3401,No,No
+22,nova,2026-09-24 15:45 UTC,Not submitted,0.5494,0.9632,0.3863,0.4759,0.3271,No,No
+23,"<a target=""_blank"" href=""https://huggingface.co/admetchallenger"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">admetchallenger</a>",2026-09-24 18:05 UTC,Not submitted,0.5495,0.9321,0.4004,0.4742,0.3298,No,No
+24,"<a target=""_blank"" href=""https://huggingface.co/N283T"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">N283T</a>",2026-09-27 05:14 UTC,Not submitted,0.5498,0.9955,0.3777,0.4412,0.2984,No,No
+25,"<a target=""_blank"" href=""https://huggingface.co/briford"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">briford</a>",2026-08-30 15:14 UTC,"<a target=""_blank"" href=""https://supercowpowers.github.io/workbench/blogs/cyp_challenge/"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">link</a>",0.5502,0.99,0.3801,0.487,0.3386,No,Yes
+26,hf-far,2026-09-02 19:55 UTC,Not submitted,0.5512,1.0627,0.3017,0.4966,0.3468,No,No
+27,"<a target=""_blank"" href=""https://huggingface.co/Moyu"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">Moyu</a>",2026-09-24 04:20 UTC,Not submitted,0.5514,1.0031,0.3759,0.5175,0.3653,Yes,No
+28,furtivepeony,2026-09-10 01:30 UTC,Not submitted,0.5569,0.9923,0.3797,0.5057,0.3544,No,No
+29,z,2026-09-28 04:41 UTC,Not submitted,0.5604,1.0114,0.3336,0.4646,0.324,No,No
+30,Ligand Pro,2026-09-25 07:24 UTC,Not submitted,0.5618,0.9964,0.3735,0.4581,0.3165,No,No
+31,"<a target=""_blank"" href=""https://huggingface.co/PushingIce"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">PushingIce</a>",2026-09-24 04:51 UTC,Not submitted,0.5627,1.0388,0.3356,0.5213,0.3685,No,No
+32,tjumbo-cyp,2026-09-27 15:06 UTC,Not submitted,0.5697,0.9866,0.3631,0.4679,0.3246,No,No
+33,ADMETForge,2026-09-22 12:33 UTC,Not submitted,0.5715,0.9389,0.4271,0.5119,0.3584,No,No
+34,random-forest,2026-09-22 12:47 UTC,Not submitted,0.5728,1.0097,0.3654,0.4859,0.3378,No,No
+35,horse-pusher,2026-09-23 03:39 UTC,Not submitted,0.578,1.1169,0.2362,0.4704,0.3287,No,No
+36,"<a target=""_blank"" href=""https://huggingface.co/hfger"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">hfger</a>",2026-09-28 08:30 UTC,Not submitted,0.583,1.15,0.1553,0.4938,0.3386,No,No
+37,tguttenb1,2026-09-27 14:03 UTC,Not submitted,0.5884,0.9979,0.3614,0.4292,0.2933,No,No
+38,"<a target=""_blank"" href=""https://huggingface.co/TeamPrescience"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">TeamPrescience</a>",2026-09-24 12:14 UTC,Not submitted,0.5918,1.0214,0.3103,0.4214,0.2877,No,No
+39,"<a target=""_blank"" href=""https://huggingface.co/PIPL-Bio"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">PIPL-Bio</a>",2026-09-13 19:12 UTC,Not submitted,0.5931,1.0169,0.3141,0.4196,0.286,No,No
+40,Gashaw,2026-09-15 00:00 UTC,Not submitted,0.5957,1.1709,0.1423,0.519,0.3593,No,No
+41,stir_bar,2026-09-27 18:47 UTC,"<a target=""_blank"" href=""https://github.com/lachrymator/openadmet-cyp-challenge-public"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">link</a>",0.5974,1.112,0.2795,0.4463,0.3088,No,No
+42,"<a target=""_blank"" href=""https://huggingface.co/Asidsal11"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">Asidsal11</a>",2026-09-25 07:38 UTC,Not submitted,0.6048,0.9927,0.2724,0.4966,0.3416,No,No
+43,"<a target=""_blank"" href=""https://huggingface.co/joewallace"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">joewallace</a>",2026-09-24 11:43 UTC,Not submitted,0.6092,1.064,0.3017,0.4344,0.2982,No,No
+44,3a4_TDI,2026-09-28 05:16 UTC,Not submitted,0.6143,1.015,0.3005,0.4234,0.2903,No,No
+45,iuo,2026-09-28 05:20 UTC,Not submitted,0.6145,1.01,0.3021,0.4278,0.2933,No,No
+46,"<a target=""_blank"" href=""https://huggingface.co/flogrammer"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">flogrammer</a>",2026-09-01 21:56 UTC,Not submitted,0.6164,0.9679,0.3675,0.5533,0.4336,No,No
+47,deoxys,2026-09-09 08:24 UTC,Not submitted,0.618,1.0637,0.2659,0.4139,0.2846,No,No
+48,"<a target=""_blank"" href=""https://huggingface.co/alexxi11"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">alexxi11</a>",2026-09-17 08:27 UTC,"<a target=""_blank"" href=""https://github.com/datagrok-ai/admetica"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">link</a>",0.6203,1.1426,0.2419,0.3908,0.2708,No,Yes
+49,cyp-o-matic,2026-09-01 13:16 UTC,Not submitted,0.6213,1.0005,0.3229,0.5593,0.4355,No,No
+50,samsung,2026-09-14 07:57 UTC,Not submitted,0.6213,1.0076,0.2914,0.4397,0.3023,No,No
+51,q7kp2,2026-09-24 23:41 UTC,Not submitted,0.6217,1.0225,0.2922,0.4253,0.2925,No,No
+52,NorthCoil,2026-09-21 15:00 UTC,Not submitted,0.6374,1.1906,0.1363,0.4721,0.3305,No,No
+53,Safi,2026-09-27 09:08 UTC,Not submitted,0.6396,1.0861,0.18,0.4479,0.3058,No,No
+54,"<a target=""_blank"" href=""https://huggingface.co/harinu123"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">harinu123</a>",2026-09-09 20:29 UTC,Not submitted,0.6399,1.0693,0.291,0.4307,0.2993,No,No
+55,Latte,2026-09-15 08:11 UTC,Not submitted,0.641,1.0287,0.2733,0.4217,0.2916,No,No
+56,CYPNet,2026-09-16 18:25 UTC,Not submitted,0.6461,1.0511,0.258,0.382,0.2635,No,No
+57,"<a target=""_blank"" href=""https://huggingface.co/JacksonBurns"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">JacksonBurns</a>",2026-09-24 14:17 UTC,"<a target=""_blank"" href=""https://github.com/JacksonBurns/cyp-challenge/tree/0fa9dd4392a5cb331a9cf867861c909cd1aca49a"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">link</a>",0.6479,1.0629,0.2514,0.4061,0.2778,No,Yes
+58,tajfun,2026-09-25 13:59 UTC,Not submitted,0.6532,1.1549,0.2212,0.43,0.2926,No,No
+59,QQSAR,2026-09-13 01:11 UTC,Not submitted,0.6546,1.0455,0.2516,0.4162,0.2871,No,No
+60,ohmycyp,2026-09-23 23:02 UTC,Not submitted,0.6557,1.0578,0.2451,0.4039,0.2814,No,No
+61,PCA,2026-09-14 08:50 UTC,Not submitted,0.6584,1.0275,0.2635,0.4286,0.2956,No,No
+62,"<a target=""_blank"" href=""https://huggingface.co/SVK091"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">SVK091</a>",2026-09-01 12:59 UTC,Not submitted,0.6745,1.123,0.1917,0.3733,0.2578,No,No
+63,Lizard Wizard Gizzard,2026-09-25 17:33 UTC,"<a target=""_blank"" href=""https://github.com/doctawho42/CYPChallenge/blob/main/docs/method_report.md"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">link</a>",0.6816,1.0633,0.3206,0.4359,0.3003,No,Yes
+64,HemeSight,2026-08-28 18:08 UTC,Not submitted,0.6865,0.9828,0.3428,0.4489,0.3138,No,No
+65,molscribe,2026-09-15 02:10 UTC,Not submitted,0.6943,1.0465,0.2104,0.4535,0.3121,No,No
+66,ÇÝPŔËŠŠ ĤÎŁŁ,2026-08-30 09:16 UTC,Not submitted,0.7078,1.1528,0.2357,0.4065,0.2803,No,No
+67,drp-to-admed,2026-08-20 07:54 UTC,Not submitted,0.7087,0.7946,0.447,0.5599,0.3965,No,No
+68,Aspiring Green Chemist,2026-09-13 13:45 UTC,Not submitted,0.7126,0.9653,0.3431,0.4278,0.2954,No,No
+69,fold-zero,2026-09-21 12:49 UTC,Not submitted,0.7165,0.8975,0.4124,0.4872,0.3415,No,No
+70,pump-again,2026-09-23 05:13 UTC,Not submitted,0.7168,0.9213,0.3924,0.5019,0.3459,No,No
+71,jeremy,2026-09-08 08:01 UTC,"<a target=""_blank"" href=""https://github.com/jeremycheminf/openadmet_scripts/tree/main/CYP_Challenge"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">link</a>",0.7283,0.8779,0.4374,0.463,0.3155,No,Yes
+72,jedi-cyp,2026-09-28 04:39 UTC,Not submitted,0.7353,0.9934,0.3171,0.451,0.3091,No,No
+73,cube_cyp,2026-09-17 13:35 UTC,Not submitted,0.7467,1.1472,0.1301,0.3584,0.2464,No,No
+74,450nm,2026-09-21 01:34 UTC,"<a target=""_blank"" href=""https://openadmet-cyp-dashboard.vercel.app/operating_dashboard"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">link</a>",0.7472,1.0326,0.2725,0.4035,0.2793,No,No
+75,lavender,2026-08-21 11:53 UTC,Not submitted,0.7496,1.0762,0.2273,0.442,0.3102,No,No
+76,I-11,2026-09-25 01:02 UTC,Not submitted,0.7902,0.9968,0.3365,0.444,0.3066,No,No
+77,molairity,2026-09-27 09:12 UTC,Invalid link,0.7904,0.9902,0.3191,0.374,0.2532,No,No
+78,Xfeature,2026-09-24 05:29 UTC,Not submitted,0.7916,0.9625,0.2371,0.3807,0.2664,No,No
+79,ubiqtuitin,2026-09-13 02:59 UTC,Not submitted,0.8044,1.3158,-0.0126,0.3994,0.2723,No,No
+80,"<a target=""_blank"" href=""https://huggingface.co/hamza322"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">hamza322</a>",2026-09-23 15:01 UTC,Not submitted,0.813,1.0314,0.3057,0.4149,0.2898,No,No
+81,lgb,2026-09-23 02:02 UTC,Not submitted,0.8159,1.1722,0.0783,0.3073,0.2118,No,No
+82,drp-to-admet,2026-08-21 18:09 UTC,Not submitted,0.8193,0.8338,0.3753,0.5605,0.389,No,No
+83,nyxen321,2026-09-14 12:36 UTC,Not submitted,0.8246,1.1321,0.2141,0.3399,0.2329,No,No
+84,CYP-PI,2026-09-24 10:54 UTC,Not submitted,0.8409,1.0518,0.1358,0.4072,0.2799,No,No
+85,Pequod Studio,2026-09-24 20:45 UTC,Not submitted,0.8608,0.9192,0.2492,0.3835,0.2701,No,No
+86,"<a target=""_blank"" href=""https://huggingface.co/Ojas45"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">Ojas45</a>",2026-09-25 11:17 UTC,Not submitted,0.8816,1.1558,0.0818,0.3612,0.2423,No,No
+87,"<a target=""_blank"" href=""https://huggingface.co/adlvdl"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">adlvdl</a>",2026-09-19 16:17 UTC,"<a target=""_blank"" href=""https://github.com/adlvdl/cyp_competition"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">link</a>",0.8902,1.0731,0.223,0.361,0.2427,No,Yes
+88,Biomni-TusoAI,2026-09-13 16:31 UTC,Not submitted,0.906,1.415,-0.1215,0.4902,0.3412,No,No
+89,"<a target=""_blank"" href=""https://huggingface.co/KalenJosifovski"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">KalenJosifovski</a>",2026-09-20 10:00 UTC,Invalid link,0.9353,1.3633,-0.2665,0.4009,0.2771,No,No
+90,CompChem Magicano,2026-09-27 19:51 UTC,Not submitted,0.9496,1.4527,-0.291,0.4733,0.3288,No,No
+91,"<a target=""_blank"" href=""https://huggingface.co/tiprlab"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">tiprlab</a>",2026-09-21 07:33 UTC,Not submitted,0.961,1.4594,-0.2787,0.4667,0.3273,No,No
+92,Chic,2026-09-21 13:12 UTC,Not submitted,0.9971,1.4845,-0.4187,0.4473,0.3083,No,No
+93,Creme,2026-09-21 11:15 UTC,Not submitted,1.0635,1.5231,-0.4764,0.4405,0.305,No,No
+94,lac,2026-09-28 00:31 UTC,Not submitted,1.1042,1.5196,-0.4997,0.3748,0.2544,No,No
+95,highsky,2026-09-24 10:11 UTC,Not submitted,1.1236,1.5525,-0.5013,0.3959,0.2698,No,No
+96,Cake,2026-09-28 09:44 UTC,Not submitted,1.1347,1.5602,-0.5432,0.4245,0.2907,No,No
+97,TabICL-baseline,2026-08-13 04:21 UTC,Not submitted,1.1452,1.5641,-0.5342,0.3572,0.2423,No,No
+98,AngryPochacco,2026-08-25 01:08 UTC,Not submitted,1.1468,1.5673,-0.561,0.4435,0.3058,No,No
+99,newcyp,2026-09-24 01:46 UTC,Not submitted,1.15,1.5689,-0.5416,0.4147,0.2847,No,No
+100,"<a target=""_blank"" href=""https://huggingface.co/Shorku"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">Shorku</a>",2026-09-24 21:45 UTC,"<a target=""_blank"" href=""https://github.com/Shorku/OpenADMET_Blind_Challenge_Predicting_CYP_Inhibition"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">link</a>",1.1807,1.5866,-0.5695,0.4342,0.2917,No,No
+101,yourchoice,2026-09-24 08:48 UTC,Not submitted,1.2077,1.6051,-0.611,0.3954,0.2665,No,No
+102,newcyp_1,2026-09-24 01:50 UTC,Not submitted,1.2197,1.6123,-0.6163,0.3805,0.2586,No,No
+103,finetuning_fp_desc,2026-09-22 00:23 UTC,Not submitted,1.233,1.6102,-0.6761,0.3556,0.2458,No,No
+104,coolbeans,2026-09-25 12:18 UTC,Not submitted,1.2334,1.6147,-0.6432,0.3508,0.2416,No,No
+105,HaroldGreatBeard,2026-09-27 23:03 UTC,Not submitted,1.2337,1.6063,-0.6635,0.3209,0.2208,No,No
+106,delay,2026-09-20 19:09 UTC,Not submitted,1.2396,1.6189,-0.6648,0.3784,0.2578,No,No
+107,aks,2026-09-23 06:22 UTC,Not submitted,1.2604,1.634,-0.7037,0.4308,0.2995,No,No
+108,CYP-GNN-19,2026-09-24 16:58 UTC,Not submitted,1.2647,1.6264,-0.6828,0.3381,0.2297,No,No
+109,Midnight Cowboy,2026-09-24 14:52 UTC,Not submitted,1.2656,1.6376,-0.6923,0.388,0.2791,No,No
+110,"<a target=""_blank"" href=""https://huggingface.co/leeherman"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">leeherman</a>",2026-09-13 14:15 UTC,"<a target=""_blank"" href=""https://docs.google.com/document/d/1Rhm161zVYxms7FYOXR6zVja5e62jtVTMXY1MXdyTqMM/edit?usp=sharing"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">link</a>",1.2676,1.6281,-0.6988,0.3992,0.2731,No,No
+111,autumnZ,2026-09-05 15:52 UTC,Invalid link,1.2854,1.6483,-0.7231,0.406,0.2765,No,No
+112,Chemical Dilettante,2026-09-24 23:35 UTC,Not submitted,1.2869,1.6505,-0.7357,0.3321,0.2246,No,No
+113,"<a target=""_blank"" href=""https://huggingface.co/lemamach"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">lemamach</a>",2026-08-28 09:43 UTC,Not submitted,1.2911,1.6522,-0.7532,0.4534,0.313,Yes,No
+114,3Dmatters,2026-09-26 00:35 UTC,Not submitted,1.2978,1.6515,-0.7439,0.4246,0.295,No,No
+115,pico,2026-09-26 16:37 UTC,Not submitted,1.2996,1.6563,-0.7431,0.3835,0.2644,No,No
+116,set12,2026-09-23 04:19 UTC,Not submitted,1.2997,1.6561,-0.7558,0.4077,0.2771,No,No
+117,thinkMolecular,2026-09-23 07:35 UTC,Not submitted,1.3002,1.6531,-0.7391,0.4099,0.2813,No,No
+118,"<a target=""_blank"" href=""https://huggingface.co/soriniXM"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">soriniXM</a>",2026-08-31 16:58 UTC,Not submitted,1.3012,1.6572,-0.7574,0.404,0.2795,No,No
+119,popcorn,2026-09-20 09:11 UTC,Not submitted,1.303,1.6585,-0.7344,0.389,0.2688,No,No
+120,popcorn2,2026-09-23 17:15 UTC,"<a target=""_blank"" href=""https://github.com/etiu/cyp_challenge"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">link</a>",1.303,1.6585,-0.7344,0.389,0.2688,No,No
+121,tabicl_moljepa_cyp_no_ft,2026-08-27 13:01 UTC,Not submitted,1.3032,1.6593,-0.744,0.4164,0.2847,No,No
+122,mobster,2026-09-20 18:56 UTC,Not submitted,1.3051,1.6628,-0.7399,0.4701,0.3194,No,No
+123,CYP Blackberry,2026-09-24 19:54 UTC,Not submitted,1.3071,1.6622,-0.7148,0.5258,0.3688,No,No
+124,aries,2026-09-28 00:27 UTC,Not submitted,1.317,1.6626,-0.7849,0.3102,0.2153,No,No
+125,IAB,2026-09-25 07:08 UTC,Not submitted,1.333,1.6607,-0.7731,0.3744,0.2588,No,No
+126,"<a target=""_blank"" href=""https://huggingface.co/shoppers"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">shoppers</a>",2026-08-31 17:58 UTC,Not submitted,1.3404,1.6824,-0.7739,0.4363,0.3003,No,No
+127,KG-CYP,2026-09-07 09:12 UTC,Not submitted,1.3476,1.6844,-0.8053,0.4548,0.3171,No,No
+128,midnight-alchemist,2026-09-24 05:32 UTC,Not submitted,1.3501,1.6842,-0.8082,0.4214,0.2892,No,No
+129,fc3b81d3,2026-09-21 04:23 UTC,Not submitted,1.3505,1.6858,-0.78,0.3195,0.2161,No,No
+130,CyclinB,2026-09-24 11:49 UTC,Not submitted,1.3518,1.6878,-0.8075,0.3949,0.2694,No,No
+131,"<a target=""_blank"" href=""https://huggingface.co/SoriniX"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">SoriniX</a>",2026-09-02 16:46 UTC,Not submitted,1.3546,1.688,-0.8118,0.3722,0.2559,No,No
+132,lex,2026-09-27 11:50 UTC,Not submitted,1.3555,1.5516,-0.6225,-0.0653,-0.0431,No,No
+133,lbgm fortune,2026-09-24 03:16 UTC,Not submitted,1.3562,1.6887,-0.8206,0.3969,0.27,No,No
+134,"<a target=""_blank"" href=""https://huggingface.co/mahmed"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">mahmed</a>",2026-08-31 17:17 UTC,Not submitted,1.3594,1.6898,-0.7938,0.3906,0.268,No,No
+135,rxbox1,2026-09-18 17:55 UTC,Not submitted,1.3607,1.6947,-0.8235,0.4505,0.3105,No,No
+136,KNIMEST,2026-09-20 15:49 UTC,Invalid link,1.3608,1.6881,-0.8011,0.38,0.26,No,No
+137,low-effort,2026-09-18 06:57 UTC,Not submitted,1.3672,1.6943,-0.8288,0.3288,0.2166,No,No
+138,XGB-baseline,2026-08-13 04:21 UTC,Not submitted,1.3731,1.6967,-0.8223,0.344,0.2338,No,No
+139,hyc,2026-09-23 12:18 UTC,Not submitted,1.3852,1.7065,-0.855,0.4097,0.28,No,No
+140,MLearner,2026-09-22 07:57 UTC,Not submitted,1.3886,1.7063,-0.8537,0.3558,0.2427,No,No
+141,levi_12,2026-09-12 10:29 UTC,Not submitted,1.3929,1.7079,-0.8614,0.3014,0.2049,No,No
+142,"<a target=""_blank"" href=""https://huggingface.co/yuan3"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">yuan3</a>",2026-09-18 14:45 UTC,Not submitted,1.3935,1.7126,-0.8386,0.3302,0.2269,No,No
+143,"<a target=""_blank"" href=""https://huggingface.co/Swathi007"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">Swathi007</a>",2026-09-21 05:20 UTC,Not submitted,1.3937,1.6519,-0.8284,0.2641,0.1746,No,No
+144,Can,2026-09-12 20:28 UTC,Not submitted,1.395,1.7126,-0.8656,0.5132,0.354,No,No
+145,"<a target=""_blank"" href=""https://huggingface.co/ademmanlincoln07"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">ademmanlincoln07</a>",2026-09-20 11:49 UTC,"<a target=""_blank"" href=""https://github.com/AdemolaTolulope/cyp-inhibition-profiler"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">link</a>",1.3964,1.7096,-0.868,0.3307,0.2237,No,Yes
+146,yuan,2026-09-18 11:55 UTC,Not submitted,1.3983,1.7151,-0.8092,0.259,0.1742,No,No
+147,bingo_84,2026-09-25 17:46 UTC,Not submitted,1.4007,1.7154,-0.8867,0.387,0.2673,No,No
+148,intrinsically-disordered,2026-08-27 13:26 UTC,Not submitted,1.4009,1.718,-0.8487,0.3553,0.2384,No,No
+149,wizard_of_cyp_exp8,2026-09-20 07:42 UTC,Not submitted,1.4057,1.718,-0.872,0.4025,0.278,No,No
+150,LGBM-baseline,2026-08-13 04:21 UTC,Not submitted,1.4059,1.7138,-0.8483,0.3522,0.2423,No,No
+151,CheMeleon-baseline,2026-08-13 04:21 UTC,Not submitted,1.4076,1.7203,-0.9144,0.3684,0.2586,No,No
+152,ChemSpace,2026-09-24 20:41 UTC,Not submitted,1.4089,1.7218,-0.8697,0.4712,0.3263,No,No
+153,splicedAffinity,2026-09-25 12:45 UTC,Not submitted,1.4112,1.7157,-0.8844,0.3322,0.2291,No,No
+154,"<a target=""_blank"" href=""https://huggingface.co/ahmed-blh"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">ahmed-blh</a>",2026-08-27 08:34 UTC,Not submitted,1.4139,1.7182,-0.8714,0.3774,0.2598,No,No
+155,"<a target=""_blank"" href=""https://huggingface.co/avaliev"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">avaliev</a>",2026-08-22 17:46 UTC,Not submitted,1.4181,1.7245,-0.8802,0.3553,0.2457,No,No
+156,mol-architect,2026-08-24 19:27 UTC,Not submitted,1.4202,1.7248,-0.8899,0.4279,0.2964,No,No
+157,alchemy,2026-09-17 02:11 UTC,Not submitted,1.4273,1.7321,-0.8927,0.4768,0.3279,No,No
+158,SLP-JJ2,2026-09-24 21:06 UTC,Not submitted,1.4274,1.7287,-0.8865,0.2817,0.193,No,No
+159,"<a target=""_blank"" href=""https://huggingface.co/srkarra"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">srkarra</a>",2026-08-20 16:59 UTC,Not submitted,1.428,1.7235,-0.8999,0.3107,0.2121,No,No
+160,helloworld,2026-09-25 07:37 UTC,Not submitted,1.428,1.7235,-0.8999,0.3107,0.2121,No,No
+161,Chocolatine,2026-08-22 12:26 UTC,Not submitted,1.4285,1.7294,-0.8932,0.3423,0.2348,No,No
+162,milo-voss,2026-09-06 08:42 UTC,Not submitted,1.4314,1.733,-0.9066,0.4554,0.3135,No,No
+163,CYPSharedGraphs,2026-09-09 12:32 UTC,Not submitted,1.4325,1.7363,-0.9073,0.4597,0.3165,No,No
+164,NIPERKOLKATA_PI_LAB,2026-09-24 10:38 UTC,Not submitted,1.4361,1.7351,-0.9235,0.3329,0.2273,No,No
+165,"<a target=""_blank"" href=""https://huggingface.co/yuan1"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">yuan1</a>",2026-09-18 12:37 UTC,Not submitted,1.4364,1.7371,-0.8953,0.3466,0.237,Yes,No
+166,Bhuvana,2026-09-21 14:06 UTC,Not submitted,1.437,1.7349,-0.9137,0.2382,0.1578,No,No
+167,Woong,2026-09-27 05:07 UTC,"<a target=""_blank"" href=""https://gist.github.com/ByungwoongYoo/4904441a9b30db077fbb784f9c22e423"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">link</a>",1.4376,1.7373,-0.9129,0.4717,0.3274,No,No
+168,baseline_icl_chemprop,2026-08-19 09:04 UTC,Not submitted,1.4415,1.7382,-0.8988,0.3798,0.2594,No,No
+169,qxw138,2026-09-24 02:12 UTC,Not submitted,1.4464,1.7428,-0.9225,0.4321,0.2951,No,No
+170,Goodnight,2026-09-27 20:15 UTC,Not submitted,1.448,1.741,-0.9243,0.3474,0.2413,No,No
+171,AL,2026-09-24 10:31 UTC,Not submitted,1.4488,1.7436,-0.9113,0.4079,0.28,No,No
+172,"<a target=""_blank"" href=""https://huggingface.co/ppsqq"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">ppsqq</a>",2026-09-14 09:42 UTC,Not submitted,1.4526,1.7466,-0.9228,0.4603,0.3163,No,No
+173,AIv_2709,2026-09-27 14:31 UTC,"<a target=""_blank"" href=""https://github.com/avnikonenko/openadmet_challenge_cyp_2026/blob/main/docs/method_report.md"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">link</a>",1.4527,1.7457,-0.9339,0.4293,0.2954,No,Yes
+174,chemfm-baseline,2026-08-25 23:58 UTC,Not submitted,1.4558,1.7465,-0.9313,0.3626,0.2487,No,No
+175,pola,2026-09-10 07:12 UTC,Not submitted,1.458,1.7467,-0.9284,0.3984,0.2707,No,No
+176,AffinityNet1,2026-09-17 10:19 UTC,Not submitted,1.4606,1.7505,-0.8971,0.356,0.2398,No,No
+177,mn_ai,2026-09-25 09:09 UTC,Not submitted,1.4607,1.7501,-0.9451,0.3473,0.236,No,No
+178,NewBees,2026-09-20 21:34 UTC,Not submitted,1.4608,1.7498,-0.9256,0.3128,0.2129,No,No
+179,LianQ,2026-09-15 08:30 UTC,Not submitted,1.4683,1.7538,-0.9353,0.4438,0.3011,No,No
+180,rogerbyrne,2026-09-01 09:39 UTC,Not submitted,1.4696,1.7555,-0.9471,0.2367,0.1551,No,No
+181,"<a target=""_blank"" href=""https://huggingface.co/tipr"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">tipr</a>",2026-09-16 06:07 UTC,Not submitted,1.4705,1.7484,-0.9723,0.3931,0.2671,No,No
+182,"<a target=""_blank"" href=""https://huggingface.co/nkwork"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">nkwork</a>",2026-08-29 10:47 UTC,"<a target=""_blank"" href=""https://github.com/nkwork9999/mollibra-challenges/blob/main/reports/openadmet_method.md"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">link</a>",1.4754,1.7597,-0.9626,0.3324,0.2306,No,Yes
+183,"<a target=""_blank"" href=""https://huggingface.co/niteesh2799"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">niteesh2799</a>",2026-09-23 11:43 UTC,Not submitted,1.4768,1.7584,-0.9599,0.3114,0.2088,No,No
+184,"<a target=""_blank"" href=""https://huggingface.co/dftchemist"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">dftchemist</a>",2026-09-25 18:38 UTC,Invalid link,1.4779,1.7598,-0.9438,0.3698,0.2541,Yes,No
+185,Diablo II,2026-09-16 00:31 UTC,Not submitted,1.4825,1.763,-0.9576,0.4337,0.2992,No,No
+186,"<a target=""_blank"" href=""https://huggingface.co/wfondrie"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">wfondrie</a>",2026-09-10 23:44 UTC,Not submitted,1.483,1.7599,-0.953,0.2271,0.1517,Yes,No
+187,Zafrens,2026-09-27 20:31 UTC,Not submitted,1.4891,1.7656,-0.9652,0.429,0.2954,No,No
+188,cartography,2026-09-18 14:27 UTC,Not submitted,1.4936,1.7692,-0.9816,0.3882,0.265,No,No
+189,"<a target=""_blank"" href=""https://huggingface.co/pramdhan1"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">pramdhan1</a>",2026-08-23 18:21 UTC,Not submitted,1.4942,1.7684,-0.9784,0.3309,0.224,No,No
+190,Qaq,2026-09-16 10:10 UTC,Not submitted,1.5,1.7718,-0.9865,0.2545,0.1692,No,No
+191,"<a target=""_blank"" href=""https://huggingface.co/tnt1234"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">tnt1234</a>",2026-08-23 19:59 UTC,Not submitted,1.5004,1.7742,-0.9898,0.3965,0.2697,No,No
+192,CYPher,2026-09-27 11:53 UTC,Not submitted,1.5073,1.7743,-1.0019,0.256,0.171,No,No
+193,"<a target=""_blank"" href=""https://huggingface.co/srikruthi12"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">srikruthi12</a>",2026-08-29 05:19 UTC,Not submitted,1.5094,1.7788,-1.0207,0.392,0.2692,No,No
+194,glhf,2026-09-05 02:10 UTC,Not submitted,1.5099,1.7774,-0.9929,0.4502,0.3107,No,No
+195,"<a target=""_blank"" href=""https://huggingface.co/VMBB1"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">VMBB1</a>",2026-08-26 17:45 UTC,Not submitted,1.5124,1.778,-0.9958,0.2561,0.1712,No,No
+196,cyp-happens,2026-08-25 20:45 UTC,Not submitted,1.5138,1.7792,-0.9941,0.3212,0.2187,No,No
+197,siryu.ai,2026-09-27 20:38 UTC,Not submitted,1.5197,1.7834,-1.0466,0.3452,0.237,No,No
+198,Liris,2026-09-14 16:54 UTC,Not submitted,1.522,1.7846,-1.0103,0.4076,0.2806,No,No
+199,Leo,2026-09-22 05:38 UTC,Not submitted,1.5221,1.7832,-1.0102,0.3611,0.2488,No,No
+200,Kutoynash,2026-09-15 17:40 UTC,Not submitted,1.5257,1.7862,-1.0152,0.3721,0.2557,No,No
+201,BUAIS Comp Bio Team,2026-09-08 03:20 UTC,Not submitted,1.5277,1.751,-0.9721,0.1994,0.1439,No,No
+202,"<a target=""_blank"" href=""https://huggingface.co/Shruti202"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">Shruti202</a>",2026-09-14 14:30 UTC,Not submitted,1.5339,1.7908,-1.0295,0.2971,0.1984,No,No
+203,sub-reg-1,2026-08-24 15:27 UTC,Not submitted,1.544,1.7954,-1.0409,0.2767,0.1881,No,No
+204,Archdruid,2026-09-25 13:54 UTC,Not submitted,1.5447,1.797,-1.0429,0.2734,0.1816,No,No
+205,warrior,2026-09-23 13:17 UTC,Not submitted,1.5525,1.8014,-1.0487,0.3426,0.2309,No,No
+206,"<a target=""_blank"" href=""https://huggingface.co/caithmac"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">caithmac</a>",2026-08-24 06:07 UTC,Not submitted,1.5575,1.8051,-1.043,0.2621,0.1776,No,No
+207,RedPanda,2026-09-24 02:33 UTC,Not submitted,1.5583,1.8072,-1.0562,0.3772,0.2574,Yes,No
+208,915Q,2026-09-15 16:21 UTC,Not submitted,1.5593,1.8059,-1.0485,0.4037,0.2779,No,No
+209,CYPCompass,2026-09-15 00:59 UTC,Not submitted,1.5595,1.8053,-1.0549,0.327,0.2227,No,No
+210,cpvx,2026-09-24 07:17 UTC,Not submitted,1.5631,1.806,-1.0696,0.2811,0.1902,No,No
+211,CYPFormer,2026-09-24 18:38 UTC,Not submitted,1.5649,1.8101,-1.0781,0.447,0.3128,Yes,No
+212,SoftMachine,2026-09-15 10:11 UTC,"<a target=""_blank"" href=""https://github.com/acnash/Strange-Matter-Engine/blob/main/results/production_genetic_programming_graph_ca_cyp3a4_v1/GP-CIA-EA-CV-CYP-GCA_METHOD.md"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">link</a>",1.5705,1.8121,-1.0364,0.3132,0.2072,No,Yes
+213,MM-2026,2026-08-27 19:34 UTC,Not submitted,1.5758,1.8149,-1.0779,0.4248,0.2927,No,No
+214,bioai96,2026-08-24 14:40 UTC,Not submitted,1.5844,1.8192,-1.1153,0.3556,0.2435,No,No
+215,Pairs?,2026-09-10 21:06 UTC,Not submitted,1.587,1.8165,-1.1259,0.1665,0.113,No,No
+216,Jackson Yamvwa,2026-09-22 20:38 UTC,"<a target=""_blank"" href=""https://github.com/Jackson-yamvwa/DrugDiscovery-Py/blob/main/openadmet-cyp-challenge%2FMETHOD_REPORT.md"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">link</a>",1.5952,1.8262,-1.1078,0.4022,0.277,No,Yes
+217,"<a target=""_blank"" href=""https://huggingface.co/set21"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">set21</a>",2026-09-22 04:33 UTC,Not submitted,1.5978,1.8251,-1.1137,0.2785,0.1882,No,No
+218,Lin,2026-09-19 05:59 UTC,Not submitted,1.6072,1.8344,-1.1154,0.4332,0.3015,No,No
+219,"<a target=""_blank"" href=""https://huggingface.co/curiouswavefn"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">curiouswavefn</a>",2026-09-24 04:06 UTC,"<a target=""_blank"" href=""https://github.com/ajogalekar/openadmet-cyp-challenge/blob/main/METHODS.md"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">link</a>",1.6082,1.8345,-1.0733,0.0805,0.0538,No,Yes
+220,"<a target=""_blank"" href=""https://huggingface.co/dargason"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">dargason</a>",2026-08-21 13:18 UTC,"<a target=""_blank"" href=""https://admet-cyp.aetherark.com/regression-submissions.html"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">link</a>",1.615,1.8389,-1.1152,0.2983,0.2078,No,Yes
+221,HBI,2026-09-20 01:01 UTC,"<a target=""_blank"" href=""https://huggingface.co/buildingpeps/hbi-cyp-challenge-v2"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">link</a>",1.6189,1.8402,-1.0848,0.0803,0.0518,No,No
+222,cypcyp,2026-09-27 08:26 UTC,Not submitted,1.6322,1.8462,-1.147,0.3832,0.2633,No,No
+223,"<a target=""_blank"" href=""https://huggingface.co/CE20B010"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">CE20B010</a>",2026-09-25 11:16 UTC,Not submitted,1.6383,1.7874,-1.1592,0.3512,0.2337,No,No
+224,HemeCompass2026,2026-09-04 05:07 UTC,Not submitted,1.6464,1.8551,-1.1872,0.2979,0.2021,No,No
+225,dengxm,2026-09-03 07:54 UTC,Not submitted,1.6724,1.8699,-1.1899,0.3344,0.2287,No,No
+226,tobi,2026-09-24 23:13 UTC,Not submitted,1.6729,1.8706,-1.224,0.3806,0.26,No,No
+227,"<a target=""_blank"" href=""https://huggingface.co/Waz-Dogz9000"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">Waz-Dogz9000</a>",2026-09-18 20:37 UTC,"<a target=""_blank"" href=""https://github.com/repowazdogz-droid/omega-openadmet-cyp-challenge"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">link</a>",1.6778,1.8747,-1.2413,0.3825,0.264,No,Yes
+228,ulcompute,2026-08-26 23:06 UTC,Not submitted,1.7277,1.9023,-1.2292,0.0,0.0,No,No
+229,jackreacher,2026-09-28 08:31 UTC,Not submitted,1.8462,1.9676,-1.4772,0.4096,0.2819,No,No
+230,"<a target=""_blank"" href=""https://huggingface.co/csnbritt"" style=""color: var(--link-text-color); text-decoration: underline;text-decoration-style: dotted;"">csnbritt</a>",2026-08-26 19:44 UTC,Not submitted,2.006,2.0615,-1.6396,0.1873,0.1249,No,No
+231,cyp450_reg,2026-09-24 07:13 UTC,Not submitted,2.3606,2.2606,-2.1892,0.1703,0.1146,No,No
+232,cyp450_TDI,2026-09-24 08:31 UTC,Not submitted,2.6161,2.4035,-2.6127,0.0186,0.0133,No,No
+233,KAI,2026-09-24 16:35 UTC,Not submitted,5.3781,3.962,-7.5054,0.2568,0.1721,No,No
+234,apple,2026-09-25 09:46 UTC,Not submitted,652.5588,368.9587,-88719.5483,0.1241,0.0832,No,No

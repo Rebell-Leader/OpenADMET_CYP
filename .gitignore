@@ -13,3 +13,11 @@ __pycache__/
 .DS_Store
 *.log
 .pytest_cache/
+oe_license_cyp_challenge_participants_openadmet_20260819-14-51-57.txt
+
+# blind-set predictions and poses stay local while the challenge is open (until 2026-11-03)
+05_submissions/submission_regression_v5.csv
+05_submissions/submission_regression_v5.parquet
+05_submissions/submission_structure_boltz2_baseline.zip
+05_submissions/submission_structure_v1_boltz2_szybki.zip
+05_submissions/submission_structure_boltz2_baseline_pdbs/
